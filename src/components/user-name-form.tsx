@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import type { UsersType } from "~/server/db/schema";
 import { api } from "~/trpc/react";
-import * as z from "zod";
+import type * as z from "zod";
 import { cn } from "@/lib/utils";
 import { userNameSchema } from "~/lib/validations/user";
 import { buttonVariants } from "@/components/ui/button";
