@@ -9,9 +9,10 @@
     "drizzle:introspect": "dotenv drizzle-kit introspect:pg",
     "drizzle:seed": "bun ./src/server/db/seed.ts",
     "drizzle:push": "dotenv drizzle-kit push:pg",
+    "drizzle:push:orgs": "dotenv drizzle-kit push:pg --breakpoints --schema=././src/server/db/org-schema.ts",
     "drizzle:studio": "dotenv drizzle-kit studio",
     "drizzle:drop": "dotenv drizzle-kit drop",
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
     "email:magiclink": "cp -r ../web.frontapp.email/emails/magic-link.tsx ./src/emails/"

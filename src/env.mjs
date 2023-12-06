@@ -32,7 +32,7 @@ export const env = createEnv({
       ),
 
     EMAIL_SERVER_HOST: z.string(),
-    EMAIL_SERVER_PORT: z.string(),
+    // EMAIL_SERVER_PORT: z.number(),
     EMAIL_FROM_USER: z.string(),
     EMAIL_PASSWORD: z.string(),
   },
@@ -52,13 +52,12 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-    // RESEND_API_KEY: process.env.RESEND_API_KEY,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL ?? `https://${process.env.VERCEL_URL}`,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL ?? `https://${process.env.VERCEL_URL}`,
     POSTGRES_URL: process.env.POSTGRES_URL,
     EMAIL_SERVER_HOST: process.env.EMAIL_SERVER_HOST,
-    EMAIL_SERVER_PORT: process.env.EMAIL_SERVER_PORT,
+    // EMAIL_SERVER_PORT: process.env.EMAIL_SERVER_PORT,
     EMAIL_FROM_USER: process.env.EMAIL_FROM_USER,
     EMAIL_PASSWORD: process.env.EMAIL_PASSWORD,
   },

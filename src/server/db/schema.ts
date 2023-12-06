@@ -42,7 +42,7 @@ export const organizations = pgTable("organization", {
 export type OrganizationType = typeof organizations.$inferInsert;
 
 export const users = pgTable("user", {
-  id: serial("id").notNull().primaryKey(),
+  id: text("id").notNull().primaryKey(),
   organization_id: uuid("organization_id")
     .notNull()
     .references(() => organizations.id),

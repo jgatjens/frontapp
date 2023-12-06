@@ -9,7 +9,7 @@ import { env } from "~/env.mjs";
 const transporter = nodemailer.createTransport({
   service: "gmail",
   host: env.EMAIL_SERVER_HOST,
-  port: 587,
+  port: 465,
   secure: false,
   auth: {
     user: env.EMAIL_FROM_USER,
@@ -32,6 +32,7 @@ export async function sendVerificationRequest(
       html: emailHtml,
     };
 
+    console.log("here =---->");
     await transporter.sendMail(options);
 
     // await resend.emails.send({
@@ -44,6 +45,6 @@ export async function sendVerificationRequest(
     //   }) as React.ReactElement,
     // });
   } catch (error) {
-    throw new Error(`Email could not be sent`);
+    throw new Error(`Email could not be sent ${error}`);
   }
 }

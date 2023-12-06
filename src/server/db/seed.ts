@@ -51,6 +51,7 @@ const main = async () => {
   const dataUsers: (typeof users.$inferInsert)[] = [];
 
   dataUsers.push({
+    id: crypto.randomUUID(),
     organization_id: dataOrganization[0]?.id ?? "",
     email: "jgatjens@gmail.com",
     name: "Jairo Gatjens",
@@ -58,6 +59,7 @@ const main = async () => {
   });
 
   dataUsers.push({
+    id: crypto.randomUUID(),
     organization_id: dataOrganization[0]?.id ?? "",
     email: "estebangatjens@gmail.com",
     name: "Dieguito Menjengo",
@@ -65,6 +67,7 @@ const main = async () => {
   });
 
   dataUsers.push({
+    id: crypto.randomUUID(),
     organization_id: dataOrganization[0]?.id ?? "",
     email: "andgatjens@gmail.com",
     name: "Yezito Quesito",
@@ -72,6 +75,7 @@ const main = async () => {
   });
 
   dataUsers.push({
+    id: crypto.randomUUID(),
     organization_id: dataOrganization[0]?.id ?? "",
     email: "gatjensb@gmail.com",
     name: "Matthew Elpeque",
@@ -79,6 +83,7 @@ const main = async () => {
   });
 
   dataUsers.push({
+    id: crypto.randomUUID(),
     organization_id: dataOrganization[0]?.id ?? "",
     email: "jariasq@gmail.com",
     name: "Jimmy Arias",
@@ -86,6 +91,7 @@ const main = async () => {
   });
 
   dataUsers.push({
+    id: crypto.randomUUID(),
     organization_id: dataOrganization[0]?.id ?? "",
     email: "z1priano@gmail.com",
     name: "Matias Benano",

@@ -22,7 +22,7 @@ import { sendVerificationRequest } from "./send-verification-request";
 declare module "next-auth" {
   interface Session extends DefaultSession {
     user: {
-      id: number;
+      id: string;
       role: UserRole;
       organization_id: string;
     } & DefaultSession["user"];
@@ -45,7 +45,7 @@ declare module "next-auth/jwt" {
    * Returned by `useSession`, `getSession` and received as a prop on the `SessionProvider` React Context
    */
   interface JWT extends DefaultJWT {
-    id: number;
+    id: string;
     role: UserRole;
     emailVerified: Date | null;
   }
@@ -120,9 +120,9 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
-  // jwt: {
-  //   secret: env.NEXTAUTH_SECRET,
-  // },
+  jwt: {
+    secret: env.NEXTAUTH_SECRET,
+  },
   secret: env.NEXTAUTH_SECRET,
   adapter: DrizzleAdapter(db),
 
