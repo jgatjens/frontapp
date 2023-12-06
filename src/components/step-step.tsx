@@ -6,17 +6,17 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import { SidebarNavItem } from "~/types";
+import type { SidebarNavItem } from "~/types";
 
 interface StepByStepProps {
   items: SidebarNavItem[];
 }
 
-export function StepByStep({ items, ...props }: StepByStepProps) {
+export function StepByStep({ items }: StepByStepProps) {
   return (
     <ul className="relative flex flex-row gap-x-2">
       {items.map((item, i) => (
-        <li className="group flex-1 shrink basis-0">
+        <li key={i} className="group flex-1 shrink basis-0">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>

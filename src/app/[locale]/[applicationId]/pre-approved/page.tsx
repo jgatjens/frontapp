@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { getCurrentUser } from "~/lib/session";
 import { DashboardShell } from "~/components/shell";
 import { SearchClientForm } from "./(personal-info)/search-client-form";
-import { CampainForm } from "./(personal-info)/campain-form";
+import { CampaignForm } from "./(personal-info)/campaign-form";
 import { DashboardHeader } from "~/components/header";
 import { PersonalInfoForm } from "./(personal-info)/personal-info-form";
 
@@ -27,7 +27,7 @@ export default async function SettingsPage() {
       />
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
         <SearchClientForm />
-        <CampainForm />
+        <CampaignForm />
         <PersonalInfoForm className="lg:col-span-2" />
       </div>
     </DashboardShell>

@@ -34,12 +34,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
+
 import { Icons } from "~/components/icons";
 // import { useToast } from "@/components/ui/use-toast";
-import { campainSchema } from "~/lib/validations/client";
+import { campaignSchema } from "~/lib/validations/client";
 
-const campains = [
+const campaigns = [
   {
     name: "General",
     value: "ci",
@@ -58,16 +58,16 @@ const campains = [
   },
 ];
 
-type FormData = z.infer<typeof campainSchema>;
+type FormData = z.infer<typeof campaignSchema>;
 
-export function CampainForm({
+export function CampaignForm({
   className,
 }: React.HTMLAttributes<HTMLFormElement>) {
   // const router = useRouter();
   // const { toast } = useToast();
 
   const form = useForm<FormData>({
-    resolver: zodResolver(campainSchema),
+    resolver: zodResolver(campaignSchema),
     defaultValues: {
       id: "",
     },
@@ -93,7 +93,8 @@ export function CampainForm({
   //   },
   // });
 
-  function onSubmit(data: FormData) {
+  // function onSubmit(data: FormData) {
+  function onSubmit() {
     setIsSaving(true);
   }
 
@@ -128,7 +129,7 @@ export function CampainForm({
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      {campains.map((item) => (
+                      {campaigns.map((item) => (
                         <SelectItem key={item.value} value={item?.value}>
                           {item.name}
                         </SelectItem>

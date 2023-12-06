@@ -36,7 +36,7 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Icons } from "~/components/icons";
-import { useToast } from "@/components/ui/use-toast";
+// import { useToast } from "@/components/ui/use-toast";
 import { searchClientSchema } from "~/lib/validations/client";
 
 interface SearchClientFormProps extends React.HTMLAttributes<HTMLFormElement> {
@@ -96,7 +96,8 @@ export function SearchClientForm({ className, client }: SearchClientFormProps) {
   //   },
   // });
 
-  function onSubmit(data: FormData) {
+  // function onSubmit(data: FormData) {
+  function onSubmit() {
     setIsSaving(true);
   }
 

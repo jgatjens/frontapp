@@ -27,16 +27,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Icons } from "~/components/icons";
-import { useToast } from "@/components/ui/use-toast";
+// import { useToast } from "@/components/ui/use-toast";
 import { searchClientSchema } from "~/lib/validations/client";
 
 interface PersonalInfoFormProps extends React.HTMLAttributes<HTMLFormElement> {
@@ -84,7 +77,8 @@ export function PersonalInfoForm({ className, client }: PersonalInfoFormProps) {
   //   },
   // });
 
-  function onSubmit(data: FormData) {
+  // function onSubmit(data: FormData) {
+  function onSubmit() {
     setIsSaving(true);
   }
 

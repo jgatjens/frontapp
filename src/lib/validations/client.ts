@@ -31,7 +31,7 @@ export const searchClientSchema = z.object({
   website: z.string(),
 });
 
-export const campainSchema = z.object({
+export const campaignSchema = z.object({
   id: z.string({
     required_error: "El id de campaña es requerido.",
   }),
