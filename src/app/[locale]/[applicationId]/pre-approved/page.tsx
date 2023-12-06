@@ -25,10 +25,10 @@ export default async function SettingsPage() {
         heading="Datos Personales"
         text="Analítica de Datos Financieros"
       />
-      <div className="grid gap-10">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
         <SearchClientForm />
         <CampainForm />
-        <PersonalInfoForm />
+        <PersonalInfoForm className="lg:col-span-2" />
       </div>
     </DashboardShell>
   );

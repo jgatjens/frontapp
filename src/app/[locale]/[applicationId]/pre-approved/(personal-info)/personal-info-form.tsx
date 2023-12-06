@@ -235,7 +235,12 @@ export function PersonalInfoForm({ className, client }: PersonalInfoFormProps) {
           <CardFooter>
             <button
               type="submit"
-              className={cn(buttonVariants(), className)}
+              className={cn(
+                buttonVariants({
+                  variant: "outline",
+                }),
+                className,
+              )}
               disabled={isSaving}
             >
               {isSaving && (

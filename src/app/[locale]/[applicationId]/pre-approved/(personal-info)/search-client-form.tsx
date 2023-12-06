@@ -114,12 +114,12 @@ export function SearchClientForm({ className, client }: SearchClientFormProps) {
               Ingrese o actualice los detalles de este usuario.
             </CardDescription>
           </CardHeader>
-          <CardContent className="grid lg:grid-cols-2 lg:gap-x-5">
+          <CardContent className="grid lg:gap-x-5">
             <FormField
               control={form.control}
               name="client_id_type"
               render={({ field }) => (
-                <FormItem className="w-full">
+                <FormItem className="mb-4 w-full">
                   <FormLabel>Tipo Identificación</FormLabel>
                   <Select
                     onValueChange={field.onChange}
@@ -150,7 +150,7 @@ export function SearchClientForm({ className, client }: SearchClientFormProps) {
               control={form.control}
               name="client_id"
               render={({ field }) => (
-                <FormItem className="mb-4 w-full">
+                <FormItem className="w-full">
                   <FormLabel>Número Identificación</FormLabel>
                   <FormControl>
                     <Input size={32} placeholder="603650892" {...field} />
@@ -166,7 +166,12 @@ export function SearchClientForm({ className, client }: SearchClientFormProps) {
           <CardFooter>
             <button
               type="submit"
-              className={cn(buttonVariants(), className)}
+              className={cn(
+                buttonVariants({
+                  variant: "outline",
+                }),
+                className,
+              )}
               disabled={isSaving}
             >
               {isSaving && (

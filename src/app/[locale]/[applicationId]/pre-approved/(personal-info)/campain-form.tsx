@@ -111,7 +111,7 @@ export function CampainForm({
               Aqui podra escoger la campaña para esta solicitud.
             </CardDescription>
           </CardHeader>
-          <CardContent className="grid lg:grid-cols-2 lg:gap-x-5">
+          <CardContent className="grid lg:gap-x-5">
             <FormField
               control={form.control}
               name="id"
@@ -147,7 +147,12 @@ export function CampainForm({
           <CardFooter>
             <button
               type="submit"
-              className={cn(buttonVariants(), className)}
+              className={cn(
+                buttonVariants({
+                  variant: "outline",
+                }),
+                className,
+              )}
               disabled={isSaving}
             >
               {isSaving && (

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { siteConfig } from "~/config/settings";
 import { MainNav } from "~/components/main-nav";
-import { DashboardNav } from "~/components/nav";
+import { PreApprovedNav } from "~/components/pre-approved-nav";
 import { SiteFooter } from "~/components/site-footer";
 import { UserAccountNav } from "~/components/user-account-nav";
 import { getCurrentUser } from "~/lib/session";
@@ -44,7 +44,7 @@ export default async function SettingsLayout({
       </header>
       <div className="container grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
         <aside className="hidden w-[200px] flex-col md:flex">
-          <DashboardNav
+          <PreApprovedNav
             items={siteConfig.sidebarPreApproved}
             role={user?.role ?? "USER"}
           />
