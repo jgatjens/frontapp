@@ -6,6 +6,7 @@ import { SiteFooter } from "~/components/site-footer";
 import { UserAccountNav } from "~/components/user-account-nav";
 import { getCurrentUser } from "~/lib/session";
 import { api } from "~/trpc/server";
+import { redirect } from "~/navigation";
 
 interface SettingsLayoutProps {
   children?: React.ReactNode;
@@ -17,7 +18,7 @@ export default async function SettingsLayout({
   const userSession = await getCurrentUser();
 
   if (!userSession) {
-    return notFound();
+    return redirect("/login");
   }
 
   const user = await api.user.getUserByEmail.query({

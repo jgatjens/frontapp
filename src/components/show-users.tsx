@@ -29,7 +29,7 @@ import { useToast } from "@/components/ui/use-toast";
 
 interface ShowUsersProps extends React.HTMLAttributes<HTMLDivElement> {
   users: UsersType[];
-  currentUserId: number;
+  currentUserId: string;
 }
 
 export function ShowUsers({ users, currentUserId }: ShowUsersProps) {

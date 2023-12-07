@@ -61,6 +61,7 @@ export const userRouter = createTRPCRouter({
     .mutation(async ({ ctx, input }) => {
       console.log(input);
       return await ctx.db.insert(users).values({
+        id: crypto.randomUUID(),
         name: input.name,
         email: input.email,
         organization_id: input.organization_id,

@@ -7,7 +7,6 @@ import {
   json,
   pgEnum,
   uuid,
-  serial,
 } from "drizzle-orm/pg-core";
 import type { AdapterAccount } from "@auth/core/adapters";
 

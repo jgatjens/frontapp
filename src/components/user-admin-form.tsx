@@ -62,6 +62,7 @@ export function UserAdminForm({
   user,
   organizations,
   className,
+  ...props
 }: UserFormProps) {
   const router = useRouter();
   const { toast } = useToast();
@@ -69,10 +70,10 @@ export function UserAdminForm({
   const form = useForm<FormData>({
     resolver: zodResolver(userAdminSchema),
     defaultValues: {
-      id: user?.id,
-      name: user?.name,
+      id: user?.id ?? "",
+      name: user?.name ?? "",
       role: user?.role,
-      email: user?.email,
+      email: user?.email ?? "",
     },
   });
 
@@ -105,10 +106,19 @@ export function UserAdminForm({
       }, 1500);
     },
     onError: (error) => {
+      let message = error.message;
+
+      if (message.includes("user_email_unique")) {
+        message =
+          "El correo electrónico ingresado ya existe, por favor ingrese otro.";
+      }
+
+      console.log(error);
+
       toast({
         variant: "destructive",
         title: "¡Oh, oh! Algo salió mal.",
-        description: error.message,
+        description: message,
       });
       setIsSaving(false);
     },
@@ -139,7 +149,7 @@ export function UserAdminForm({
       <form
         className={cn(className)}
         onSubmit={form.handleSubmit(onSubmit)}
-        // {...props}
+        {...props}
       >
         <Card>
           <CardHeader>
