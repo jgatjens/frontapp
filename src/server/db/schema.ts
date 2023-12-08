@@ -18,7 +18,7 @@ import type { AdapterAccount } from "@auth/core/adapters";
  */
 
 export const roleEnum = pgEnum("role", ["USER", "ADMIN"]);
-export const schemaEnum = pgEnum("schema", ["company_1"]);
+export const schemaEnum = pgEnum("schema", ["public", "company_abc"]);
 
 // Change name of copy_hub_t3 to create prefixes for tables:
 
@@ -34,7 +34,7 @@ export const organizations = pgTable("organization", {
     .notNull()
     .references(() => companies.id),
   name: text("name"),
-  schema: schemaEnum("schema").default("company_1"),
+  schema: schemaEnum("schema").default("company_abc"),
   settings: json("settings"),
 });
 

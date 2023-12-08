@@ -1,5 +1,5 @@
 import { db } from "~/server/db";
-import { getClientsTable } from "~/server/db/org-schema";
+import { getClientsTable } from "~/server/db/schema-orgs";
 
 async function main() {
   const clients = getClientsTable("company_1");

@@ -5,23 +5,23 @@ export const siteConfig: SiteNavConfig = {
   mainNav: [
     {
       title: "Pre Aprovado",
-      href: "/pre-approved",
+      href: "/new/pre-approved",
     },
   ],
   sidebarPreApproved: [
     {
       title: "Datos Personales",
-      href: "/pre-approved",
+      href: "/new/pre-approved",
       icon: "settings",
     },
     {
       title: "Actividad Económica",
-      href: "/pre-approved/economic-activity",
+      href: "/new/pre-approved/economic-activity",
       icon: "post",
     },
     {
       title: "Verificación de Normativa",
-      href: "/pre-approved/regulatory-verification",
+      href: "/new/pre-approved/regulatory-verification",
       icon: "post",
     },
   ],

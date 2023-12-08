@@ -7,20 +7,20 @@ import {
 } from "drizzle-orm/pg-core";
 
 // CAMPAINS TABLE
-const campainsColumns = {
+const campaignsColumns = {
   id: serial("id").notNull(),
   name: text("name").notNull(),
 };
 
-export const campains = pgTable("campain", campainsColumns);
+export const campaigns = pgTable("campaign", campaignsColumns);
 
 export const getCampainsTable = <TSchema extends string>(
   schemaName: TSchema,
 ) => {
-  return pgSchema(schemaName).table("campain", clientsColumns);
+  return pgSchema(schemaName).table("campaign", clientsColumns);
 };
 
-export type CampainsType = typeof campains.$inferInsert;
+export type CampainsType = typeof campaigns.$inferInsert;
 
 // CLIENTS TABLE
 const clientsColumns = {

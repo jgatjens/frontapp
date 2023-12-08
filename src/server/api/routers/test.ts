@@ -5,7 +5,7 @@ import {
   // protectedProcedure,
   publicProcedure,
 } from "~/server/api/trpc";
-import { getClientsTable } from "~/server/db/org-schema";
+import { getClientsTable } from "~/server/db/schema-orgs";
 // import { mySchemaUsers } from "~/server/db/schemas/bcr";
 
 export const userRouter = createTRPCRouter({

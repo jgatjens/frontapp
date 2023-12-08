@@ -24,7 +24,7 @@ npx shadcn-ui@latest add button
 docker-compose up --build -d
 
 # if you use pgadmin from docker the Host name/Adress would be the postgres container_name:
-# example: t3stack_postgres
+# example: frontapp_postgres
 
 # add tables to db and generates prisma client
 npm run db:push

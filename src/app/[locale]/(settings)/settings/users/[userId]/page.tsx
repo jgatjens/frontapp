@@ -7,17 +7,18 @@ import { UserRole } from "~/constans";
 import { UserAdminForm } from "~/components/user-admin-form";
 
 export const metadata = {
-  title: "New user",
+  title: "New User",
   description: "New user.",
 };
 
 export default async function NewUserPage() {
   const userSession = await getCurrentUser();
-  const organizations = await api.organization.getAll.query();
 
   if (userSession?.role !== UserRole.Admin) {
     redirect("/settings");
   }
+
+  const organizations = await api.organization.getAll.query();
 
   return (
     <DashboardShell>

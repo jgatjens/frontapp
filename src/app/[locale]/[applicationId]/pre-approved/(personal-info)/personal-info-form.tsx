@@ -4,7 +4,7 @@ import * as React from "react";
 // import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import type { ClientsType } from "~/server/db/org-schema";
+import type { ClientsType } from "~/server/db/schema-orgs";
 // import { api } from "~/trpc/react";
 import type * as z from "zod";
 import { cn } from "@/lib/utils";
