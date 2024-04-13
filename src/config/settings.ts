@@ -4,7 +4,7 @@ import type { SiteNavConfig } from "~/types";
 export const siteConfig: SiteNavConfig = {
   mainNav: [
     {
-      title: "Pre Aprovado",
+      title: "Formulario",
       href: "/new/pre-approved",
     },
   ],
@@ -17,12 +17,37 @@ export const siteConfig: SiteNavConfig = {
     {
       title: "Actividad Económica",
       href: "/new/pre-approved/economic-activity",
-      icon: "post",
+      icon: "user",
     },
     {
       title: "Verificación de Normativa",
       href: "/new/pre-approved/regulatory-verification",
       icon: "post",
+    },
+    {
+      title: "Detalles de pasivos",
+      href: "/new/pre-approved/pasive-detail",
+      icon: "media",
+    },
+    {
+      title: "Escenario Preliminar",
+      href: "/new/pre-approved/preliminary-scenario",
+      icon: "post",
+    },
+    {
+      title: "Detalles de pasivos",
+      href: "/new/pre-approved/preliminary-scenario",
+      icon: "media",
+    },
+    {
+      title: "Capacidad de Pago",
+      href: "/new/pre-approved/payment-capacity",
+      icon: "help",
+    },
+    {
+      title: "Estructura de Financiamiento",
+      href: "/new/pre-approved/financing-structure",
+      icon: "pizza",
     },
   ],
   sidebarNav: [

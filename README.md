@@ -1,6 +1,4 @@
-# FrontApp e
-
-This is a [t3stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+# Template FrontApp
 
 - [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
@@ -10,14 +8,25 @@ This is a [t3stack](https://create.t3.gg/) project bootstrapped with `create-t3-
 - [Postgres](https://tailwindcss.com)
 - [lucide react](https://lucide.dev/guide/packages/lucide-react)
 
-# shadcn add components
+## Features
+
+- Example login form
+- Login with email (using google personal account)
+- TRPC react server components
+- Example how to handle CRUD (admin users)
+
+| Users Admin                | Login                            |
+| -------------------------- | -------------------------------- |
+| ![login](public/users.png) | ![users admin](public/login.png) |
+
+## shadcn add components
 
 ```bash
 #example
 npx shadcn-ui@latest add button
 ```
 
-# Docker (db and pgadmin)
+## Docker (db and pgadmin)
 
 ```bash
 # creates docket containers
@@ -42,3 +51,9 @@ docker exec -i frontapp_postgres psql -U postgres -d frontapp < ./db/dev_clear_d
 # restore database on local docker
 docker exec -i frontapp_postgres psql -U postgres -d frontapp < ./db/dev_backup.dump
 ```
+
+## React Template
+
+[Frontapp Email Repo](https://github.com/jgatjens/frontapp.email)
+
+![email](public/email.png)

@@ -17,7 +17,7 @@ export const campaigns = pgTable("campaign", campaignsColumns);
 export const getCampainsTable = <TSchema extends string>(
   schemaName: TSchema,
 ) => {
-  return pgSchema(schemaName).table("campaign", clientsColumns);
+  return pgSchema(schemaName).table("campaign", campaignsColumns);
 };
 
 export type CampainsType = typeof campaigns.$inferInsert;

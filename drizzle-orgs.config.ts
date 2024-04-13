@@ -2,7 +2,7 @@ import type { Config } from "drizzle-kit";
 
 export default {
   schema: "./src/server/db/schema-orgs.ts",
-  schemaFilter: ["company_abc", "company_zxy"],
+  schemaFilter: ["company_abc"],
   out: "./drizzle/migrations-orgs",
   driver: "pg",
   verbose: true,

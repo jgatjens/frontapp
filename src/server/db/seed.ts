@@ -71,7 +71,7 @@ const main = async () => {
     organization_id: dataOrganization[0]?.id ?? "",
     email: "andgatjens@gmail.com",
     name: "Yezito Quesito",
-    role: "ADMIN",
+    role: "USER",
   });
 
   dataUsers.push({
@@ -95,7 +95,7 @@ const main = async () => {
     organization_id: dataOrganization[0]?.id ?? "",
     email: "z1priano@gmail.com",
     name: "Matias Benano",
-    role: "ADMIN",
+    role: "USER",
   });
 
   await db.insert(users).values(dataUsers);
